@@ -831,7 +831,7 @@ namespace Sitecore.ItemBucket.Kernel.Managers
             Contract.Requires(childItemCreationDateTime.IsNotNull());
 
             var database = topParent.Database;
-            var dateFolder = childItemCreationDateTime.ToString(Config.BucketFolderPath);
+            var dateFolder = childItemCreationDateTime.ToString(Config.BucketFolderPath, CultureInfo.InvariantCulture);
             var destinationFolderPath = topParent.Paths.FullPath + Constants.ContentPathSeperator + dateFolder;
             Item destinationFolderItem;
             
